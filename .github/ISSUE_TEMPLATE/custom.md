@@ -17,5 +17,5 @@ assignees: ''
 
 ## タスク
 細かいタスクがある場合は書き出す
-- [] XXXXX
-- [] YYYYY
+- [ ] XXXXX
+- [ ] YYYYY
