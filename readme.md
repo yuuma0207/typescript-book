@@ -5,8 +5,8 @@ npm install
 
 # Run `hoge.tsc`
 ```bash
-$ npx tsc
-$ node dist/hoge.js
+npx tsc
+node dist/hoge.js
 ```
 
 # From empty directory
