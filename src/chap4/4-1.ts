@@ -83,3 +83,7 @@ const sum = (...args: number[]): number => { // rest引数の型注釈は必ず�
 
 console.log(sum(1,10,100));
 console.log(sum(123,456));
+
+// 4.1.8
+const nums = [1,2,3,4,5];
+console.log(sum(...nums, 6, ...nums));
