@@ -59,7 +59,7 @@ type ReturnObj = {
 // Objectリテラルの場合は式を()で囲む必要があり
 const calcBMIObject = ({ height, weight }: Human): ReturnObj => ({ bmi: weight/height**2 });
 
-//4.1.6
+// 4.1.6
 const obj = {
     double(num: number): number {
         return num*2;
@@ -71,3 +71,15 @@ const obj = {
 
 console.log(obj.double(100));
 console.log(obj.double2(-50))
+
+// 4.1.7
+const sum = (...args: number[]): number => { // rest引数の型注釈は必ず配列型もしくはタプル型
+    let result = 0;
+    for (const num of args) {
+        result += num;
+    }
+    return result;
+};
+
+console.log(sum(1,10,100));
+console.log(sum(123,456));
