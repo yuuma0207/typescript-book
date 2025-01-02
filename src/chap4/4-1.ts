@@ -87,3 +87,16 @@ console.log(sum(123,456));
 // 4.1.8
 const nums = [1,2,3,4,5];
 console.log(sum(...nums, 6, ...nums));
+
+// 4.1.9
+const toLowerOrUpper = (str: string, upper: boolean = false): string => {
+    if (upper) {
+        return str.toUpperCase();
+    } else {
+        return str.toLowerCase();
+    }
+}
+
+console.log(toLowerOrUpper("Hello", undefined));
+console.log(toLowerOrUpper("Hello", false));
+console.log(toLowerOrUpper("Hello", true));
