@@ -44,3 +44,7 @@ const uhyo: Human = { height: 1.84, weight: 72 }
 
 console.log(calcBMI(uhyo))
 
+// 4.1.4
+const calcBMI_arrow = ({ height, weight }: Human): number => {
+    return weight/height**2;
+};
