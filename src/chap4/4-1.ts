@@ -100,3 +100,31 @@ const toLowerOrUpper = (str: string, upper: boolean = false): string => {
 console.log(toLowerOrUpper("Hello", undefined));
 console.log(toLowerOrUpper("Hello", false));
 console.log(toLowerOrUpper("Hello", true));
+
+// 4.1.10
+type User_chap4 = { name: string, age: number };
+
+const getName = (u: User_chap4): string => {
+    console.log("u is", u);
+    return u.name
+};
+const users_chap4: User_chap4[] = [
+    { name: "uhyo", age: 26 },
+    { name: "John Smith", age: 15 }
+];
+
+// const names = users_chap4.map(getName);
+
+const names = users_chap4.map((u: User_chap4): string => u.name);
+console.log(names);
+
+const adultUsers = users_chap4.filter((user: User_chap4): boolean => user.age >= 20);
+const allAdult = users_chap4.every((user: User_chap4): boolean => user.age >= 20);
+const seniorExists = users_chap4.some((user: User_chap4): boolean => user.age >= 60);
+
+const john = users_chap4.find((user: User_chap4) => user.name.startsWith("John"));
+
+console.log(adultUsers);
+console.log(allAdult);
+console.log(seniorExists);
+console.log(john);
