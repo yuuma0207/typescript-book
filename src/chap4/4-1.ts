@@ -58,3 +58,16 @@ type ReturnObj = {
 
 // Objectリテラルの場合は式を()で囲む必要があり
 const calcBMIObject = ({ height, weight }: Human): ReturnObj => ({ bmi: weight/height**2 });
+
+//4.1.6
+const obj = {
+    double(num: number): number {
+        return num*2;
+    },
+
+    // 通常のプロパティの書き方+arrow関数の省略形
+    double2: (num: number): number => num*2,
+};
+
+console.log(obj.double(100));
+console.log(obj.double2(-50))
