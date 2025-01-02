@@ -48,3 +48,13 @@ console.log(calcBMI(uhyo))
 const calcBMI_arrow = ({ height, weight }: Human): number => {
     return weight/height**2;
 };
+
+// 4.1.5
+const calcBMI_arrow2 = ({ height, weight }: Human): number => weight/height**2;
+
+type ReturnObj = {
+    bmi: number
+}
+
+// Objectリテラルの場合は式を()で囲む必要があり
+const calcBMIObject = ({ height, weight }: Human): ReturnObj => ({ bmi: weight/height**2 });
